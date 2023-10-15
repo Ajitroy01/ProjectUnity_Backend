@@ -64,6 +64,7 @@ public class ProjectController {
         existingProject.setStartDate(project.getStartDate());
         existingProject.setEndDate(project.getEndDate());
         existingProject.setProjectManager(project.getProjectManager());
+        existingProject.setImageUrl(project.getImageUrl());
         Project updatedProject = projectService.updateProject(existingProject);
         return new ResponseEntity<>(updatedProject, HttpStatus.OK);
     }
